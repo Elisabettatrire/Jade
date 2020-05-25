@@ -17,8 +17,8 @@ Per lanciare direttamente la piattaforma la classe di boot e' jade.Boot
 
 Per la compilazione da riga di comando:
 "javac -cp <path_to_jade.jar>/jade.jar:<path_to_commons-codec>/commons-codec-1.3.jar -d <destination_folder> <path_to_java_classes_src>/MyAgent.java"
-Per il lancio da riga di comando: "java -cp <path_to_jade.jar>/jade.jar:<path_to_commons-codec>/commons-codec-1.3.jar:<path_to_binaries> jade.Boot -gui Gilber:agents.MyAgent
+Per il lancio da riga di comando: "java -cp <path_to_jade.jar>/jade.jar:<path_to_commons-codec>/commons-codec-1.3.jar:<path_to_binaries> jade.Boot -gui Gilbert:agents.MyAgent
 
 In alternativa, si puo' creare una configurazione di lancio nell'IDE usato. Una possibile configurazione delle opzioni di lancio e'
 
-- -gui Pippo:agents.MyAgent
+- -gui Gilbert:agents.MyAgent
