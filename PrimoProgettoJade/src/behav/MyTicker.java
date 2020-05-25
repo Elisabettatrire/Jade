@@ -19,6 +19,6 @@ public class MyTicker extends TickerBehaviour
 		long pastTime = timeStamp - currentTime;
 		System.out.println(myAgent.getLocalName() + ": my ticker --- " + pastTime);
 		currentTime = timeStamp;
-		this.myAgent.addBehaviour(new MyOneShot(this.myAgent));
+		//this.myAgent.addBehaviour(new MyOneShot(this.myAgent));
 	}
 }
