@@ -18,7 +18,7 @@ public class Stampatore extends Agent
 	public void setup()
 	{
 		this.addBehaviour(new ReceivePrintingRequest(this));
-		this.addBehaviour(new WakerBehaviour(this, 10000)
+		this.addBehaviour(new WakerBehaviour(this, 5000)
 		{
 			protected void onWake()
 			{
