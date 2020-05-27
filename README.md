@@ -55,6 +55,7 @@ Il progetto e' strutturato in due package, "agents" e "behav" come segue:
 Agents
 - Richiedente.java -> agente che ricerca il servizio di stampa presso il DF, e lo richiede
 - Stampatore.java -> agente che offre il servizio di stampa, pubblicandolo presso il DF
+
 Behav
 - InteractionBehaviour.java -> OneShot behaviour di interazione con un altro agente; lascia il metodo action vuoto
 - ReceiveMessage.java -> Cyclic behaviour per ricevere i messaggi di accettazione e avvenuta stampa
