@@ -22,3 +22,13 @@ Per il lancio da riga di comando: "java -cp <path_to_jade.jar>/jade.jar:<path_to
 In alternativa, si puo' creare una configurazione di lancio nell'IDE usato. Una possibile configurazione delle opzioni di lancio e'
 
 - -gui Gilbert:agents.MyAgent
+
+Per testare lo scambio di messaggi una possibile configurazione delle opzioni di lancio della piattaforma e':
+
+-gui Pippo:agents.MyAgent(send);Pluto:agents.MyAgent
+
+Infine e' possibile lanciare la piattaforma da un'applicazione esterna. Per esempio puo' essere avviata l'applicazione dal main di "PlatformCreator".
+
+Per lanciare un'esempio con due container e' possibile usare due configurazioni
+1. -gui Gilbert:agents.MyAgent
+2. -container -host <IP_MAIN_CONTAINER> -port <PORTA_MAIN_CONTAINER> Sheed:agents.MyAgent(send)
