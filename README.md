@@ -5,7 +5,7 @@ Il repository contiene gli esempi JADE svolti durante le lezioni del corso di Si
 ## ESEMPI
 ### PrimoProgettoJade
 
-L'esempio "PrimoProgettoJade" puo' essere quindi direttamente importato in Eclipse, NetBeans e IntelliJ ma occorre ricordare di cambiare il percorso alle librerie "jade.jar" e "commons-codec-1.3.jar" presenti nelle proprietà.
+L'esempio "PrimoProgettoJade" puo' essere direttamente importato in Eclipse, NetBeans e IntelliJ ma occorre ricordare di cambiare il percorso alle librerie "jade.jar" e "commons-codec-1.3.jar" presenti nelle proprietà.
 
 Il progetto e' strutturato in tre package, "agents", "behav" e "utils" come segue:
 
