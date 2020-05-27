@@ -9,7 +9,7 @@ L'esempio "PrimoProgettoJade" puo' essere quindi direttamente importato in Eclip
 
 Il progetto e' strutturato in tre package, "agents", "behav" e "utils" come segue:
 
-Agent
+Agents
 - MyAgent.java
 
 Behav
@@ -53,16 +53,16 @@ Anche il progetto DFProject puo' essere direttamente importato in Eclipse, NetBe
 Il progetto e' strutturato in due package, "agents" e "behav" come segue:
 
 Agents
-	- Richiedente.java -> agente che ricerca il servizio di stampa presso il DF, e lo richiede
-	- Stampatore.java -> agente che offre il servizio di stampa, pubblicandolo presso il DF
+- Richiedente.java -> agente che ricerca il servizio di stampa presso il DF, e lo richiede
+- Stampatore.java -> agente che offre il servizio di stampa, pubblicandolo presso il DF
 Behav
-	- InteractionBehaviour.java -> OneShot behaviour di interazione con un altro agente; lascia il metodo action vuoto
-	- ReceiveMessage.java -> Cyclic behaviour per ricevere i messaggi di accettazione e avvenuta stampa
-	- ReceivePrintingRequest.java -> Cyclic behaviour per ricevere la richiesta di stampa
-	- RegisterToDF.java -> OneShotBehaviour per registrare un servizio al DF
-	- RequestPrintService.java -> InteractionBehaviour per richiedere una stampa
-	- SearchService.java -> Ticker behaviour per cercare un servizio presso il DF
-	- SubscribeToPrint.java -> Behaviour per iscriversi al servizio di notifica del DF
+- InteractionBehaviour.java -> OneShot behaviour di interazione con un altro agente; lascia il metodo action vuoto
+- ReceiveMessage.java -> Cyclic behaviour per ricevere i messaggi di accettazione e avvenuta stampa
+- ReceivePrintingRequest.java -> Cyclic behaviour per ricevere la richiesta di stampa
+- RegisterToDF.java -> OneShotBehaviour per registrare un servizio al DF
+- RequestPrintService.java -> InteractionBehaviour per richiedere una stampa
+- SearchService.java -> Ticker behaviour per cercare un servizio presso il DF
+- SubscribeToPrint.java -> Behaviour per iscriversi al servizio di notifica del DF
 
 Per testare scambio di messaggi e uso del DF di default su una stessa piattaforma, una possibilita' e' lanciare due volte JADE con le seguenti configurazioni: 
 
