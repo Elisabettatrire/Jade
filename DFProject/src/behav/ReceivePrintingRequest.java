@@ -26,16 +26,15 @@ public class ReceivePrintingRequest extends CyclicBehaviour
 			ACLMessage reply = msg.createReply();
 			reply.setPerformative(ACLMessage.AGREE);
 			reply.setContent("Accetto la tua richiesta");
+			this.myAgent.send(reply);
 			
-			this.myAgent.addBehaviour(new WakerBehaviour(this.myAgent, 2000)
+			System.out.println(this.myAgent.getLocalName() + ": il messaggio che devo stampare e'");
+			System.out.println(this.myAgent.getLocalName() + ": " + msg.getContent());
+			
+			this.myAgent.addBehaviour(new WakerBehaviour(this.myAgent, 3000)
 			{
 				protected void onWake()
-				{
-					this.myAgent.send(reply);
-					
-					System.out.println(this.myAgent.getLocalName() + ": il messaggio che devo stampare e'");
-					System.out.println(this.myAgent.getLocalName() + ": " + msg.getContent());
-					
+				{				
 					reply.setPerformative(ACLMessage.INFORM);
 					reply.setContent("Ho stampato il tuo messaggio");
 					

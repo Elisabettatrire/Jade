@@ -5,6 +5,7 @@ import jade.core.behaviours.TickerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.SearchConstraints;
 
 public class SearchService extends TickerBehaviour
 {
@@ -19,8 +20,12 @@ public class SearchService extends TickerBehaviour
 	
 	protected void onTick()
 	{
-		try {
-			DFAgentDescription[] dads = DFService.search(this.myAgent, dadToSearch);
+		try 
+		{
+			SearchConstraints sc = new SearchConstraints();
+			//sc.setMaxDepth(new Long(0));
+			sc.setMaxDepth(new Long(1));
+			DFAgentDescription[] dads = DFService.search(this.myAgent, dadToSearch, sc);
 			
 			if (dads != null && dads.length > 0)
 			{

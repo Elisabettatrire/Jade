@@ -4,6 +4,8 @@ import behav.ReceivePrintingRequest;
 import behav.RegisterToDF;
 import jade.core.Agent;
 import jade.core.behaviours.WakerBehaviour;
+import jade.domain.DFService;
+import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 
@@ -36,5 +38,13 @@ public class Stampatore extends Agent
 		return dad;
 	}
 	
-	
+	public void takeDown()
+	{
+		try {
+			DFService.deregister(this);
+		} catch (FIPAException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
