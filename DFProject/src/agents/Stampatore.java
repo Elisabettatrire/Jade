@@ -1,5 +1,6 @@
 package agents;
 
+import behav.ReceivePrintingRequest;
 import behav.RegisterToDF;
 import jade.core.Agent;
 import jade.core.behaviours.WakerBehaviour;
@@ -10,9 +11,11 @@ public class Stampatore extends Agent
 {
 	public static final String SERVICE_NAME = "print";
 	public static final String SERVICE_TYPE = "print-service";
+	public static final String CONV_ID = "print-conv";
 	
 	public void setup()
 	{
+		this.addBehaviour(new ReceivePrintingRequest(this));
 		this.addBehaviour(new WakerBehaviour(this, 10000)
 		{
 			protected void onWake()
